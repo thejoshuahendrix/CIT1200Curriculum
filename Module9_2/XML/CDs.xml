@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordstore>
+<cd category="hiphop">
+<title lang="en">Lucid Dreams</title>
+<artist>JuiceWrld</artist>
+<year>2018</year>
+<price>30.00</price>
+</cd>
+<cd category="pop">
+<title lang="en">Mood</title>
+<artist>24kGolden</artist>
+<year>2020</year>
+<price>29.99</price>
+</cd>
+<cd category="country">
+<title lang="en">Your Gonna Miss This</title>
+<artist>Trace Adkins</artist>
+<year>2007</year>
+<price>39.95</price>
+</cd>
+</recordstore>

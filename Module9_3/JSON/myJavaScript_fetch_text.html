@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="The HTML5">
+    <meta name="author" content="html5">
+    <title>The HTML5</title>
+</head>
+
+<body>
+    <h1>Fetch with a Text File</h1>
+    <div id="myText"></div>
+    <script>
+        //catchMyText() function call
+        //Added error handlingand a message to console.log()
+        catchMyText().then(response => {
+            console.log("successful");
+        }).catch(error => {
+            console.log("error");
+            console.error(error);
+        });//catchMyText() function definition -we use async function  
+        async function catchMyText() {
+            const response = await fetch("mySunshine.txt");
+            const data = await response.text();
+            document.getElementById("myText").innerHTML = data;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+Welcome to CIT1200<br>
+This is an example of jQuery and ajax.

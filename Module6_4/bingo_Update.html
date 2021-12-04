@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Bingo-Array, Loop and Random number - Make Three numbers here</title>
+<script>
+function Bingo()
+{
+var maxnumber =/^[1-9]{1}$/;
+if (maxnumber.test(document.getElementById("maxnum").value)==true)
+{
+BingoProcess();
+}
+else
+{
+alert("input A number between 1-9");
+}
+}
+function BingoProcess()
+{
+var max = document.getElementById("maxnum").value;
+var bingoNumber = [];
+var i=0;
+while (i<3)
+{
+bingoNumber[i]= Math.floor((Math.random()*max)+1);
+i++;
+}
+for (i in bingoNumber)
+{
+document.getElementById("demo["+i +"]").style.backgroundColor="white";
+document.getElementById("demo["+ i +"]").value = bingoNumber[i];
+}
+if ((bingoNumber[0]== bingoNumber[1])&&(bingoNumber[1]== bingoNumber[2]))//Bingo case
+{
+document.getElementById("demo[0]").style.backgroundColor="red";
+document.getElementById("demo[1]").style.backgroundColor="red";
+document.getElementById("demo[2]").style.backgroundColor="red";
+alert("Bingo, You Won!");
+document.getElementById("result").innerHTML="You Won";
+
+}
+else
+{
+document.getElementById("result").innerHTML="Sorry no BINGO, Try again!";
+}
+}
+</script>
+</head>
+<body>
+<h1>JavaScript Bingo-Array, Loop and
+Random number - Make Three numbers
+here</h1><br>
+Enter a positive number (1-9) and Click below for Bingo<br>
+<p>*Default value is 3.</p>
+<p>Enter Max number:<input id="maxnum" value="3">
+<p><button type="button" onclick="Bingo()">Click Me! </button></p>
+<p><input id="demo[0]" type="text"><input id="demo[1]" type="text"><input id="demo[2]"
+type="text"></p>
+
+<p id="result">Result goes here.</p>
+</body>
+</html>

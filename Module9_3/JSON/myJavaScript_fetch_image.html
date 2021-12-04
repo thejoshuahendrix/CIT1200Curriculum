@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="The HTML5">
+    <meta name="author" content="html5">
+    <title>The HTML5</title>
+</head>
+
+<body>
+    <h1>Fetch with an Image</h1>
+    <img src="" id="myImage" width="480">
+        <script>
+            catchImage();  //catchImage() function call
+            //catchImage() function definition -we use async function
+            async function catchImage() {
+                const response = await fetch("robot.jpg");
+                const blob = await response.blob();
+                document.getElementById("myImage").src = URL.createObjectURL(blob);
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GPA Calculator with validation</title>
+<meta name="keywords" content="CIT1200, Marion Technical College, MTC, Joshua Hendrix, GPA Calculator"/>
+<meta name="description" content ="Student work from Fall 2020 in CIT1200 at Marion Technical College. This
+page is a GPA Calculator based on 4 letter grades"/>
+<link rel="stylesheet" href="gpastylesheet.css">
+</head>
+
+<body>
+<div id="Banner">
+<div id="InnerBanner"><h1>Joshua Hendrix</h1></div>
+<div id="Greeting"><p> Welcome
+to my GPA Grade
+Processor. In the
+form below, enter
+one letter grade
+into each of the 4
+textboxes. The
+grades must be a
+letter grade A-F.
+The system will
+then calculate your
+GPA based on
+those 4 letter
+grades</p></div>
+</div>
+
+<div id="BodyContent">
+<p>Letter Grade 1:<input id="inputgrade1" type="letter" pattern=> 
+<p>Letter Grade 2:<input id="inputgrade2"> 
+<p>Letter Grade 3:<input id="inputgrade3"> 
+<p>Letter Grade 4:<input id="inputgrade4"> </p>
+<button onclick="Calc()">Submit</button><button onclick="Clear()">Clear</button>
+</div>
+
+<div id="Footer"><img src="logo.gif" link="https://www.mtc.edu" id="FooterLogoLink">
+<p>Visit the <a href="https://www.mtc.edu">Marion Technical College</a>
+Web site to learn more about Interactive Media. <br>
+© Joshua Hendrix 2020
+<div>
+<script src="calc.js"></script>
+</body>
+</html>

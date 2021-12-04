@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Bingo-Array, Loop and Random number - Make Three numbers here</title>
+<script>
+function Bingo()
+{
+var bingoNumber = [];
+var i=0;
+while (i<3)
+{
+bingoNumber[i]= Math.floor((Math.random()*10)+1);
+i++;
+}
+for (i in bingoNumber)
+{
+document.getElementById("demo["+i +"]").style.backgroundColor="white";
+document.getElementById("demo["+ i +"]").value = bingoNumber[i];
+}
+if ((bingoNumber[0]== bingoNumber[1])&&(bingoNumber[1]== bingoNumber[2]))//Bingo case
+{
+document.getElementById("demo[0]").style.backgroundColor="red";
+document.getElementById("demo[1]").style.backgroundColor="red";
+document.getElementById("demo[2]").style.backgroundColor="red";
+alert("Bingo, You Won!");
+}
+else
+{
+alert("Sorry, Try Again.");
+}
+}
+</script>
+</head>
+<body>
+<h1>JavaScript Bingo-Array, Loop and
+Random number - Make Three numbers
+here</h1><br>
+Click below for Bingo<br>
+<p><input id="demo[0]" type="text"><input id="demo[1]" type="text"><input id="demo[2]"
+type="text"></p>
+<p><button type="button" onclick="Bingo()">Click Me! </button></p>
+</body>
+</html>

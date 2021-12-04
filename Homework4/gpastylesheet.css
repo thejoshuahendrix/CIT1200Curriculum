@@ -1,0 +1,53 @@
+#Banner
+{
+	width:85vw;
+	margin-left:auto;
+	margin-right:auto;
+}
+#InnerBanner
+{
+	text-align:center;
+	font-family:Georgia, serif;
+}
+#Greeting
+{
+	font-family:"Impact", Charcoal, sans-serif;
+}
+#BodyContent
+{
+	width:90vw;
+	padding:10px;
+	border: solid 5px DarkBlue;
+	margin-left:auto;
+	margin-right:auto;
+	outline: groove 10px Gold;
+	
+}
+#Footer
+{
+	font-size:14px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+#FooterLogoLink
+{
+	border:none;
+}
+a:link{
+	color:DarkBlue;
+}
+a:hover
+{
+	color:Gold;
+	font-weight:bold;
+}
+a:visited
+{
+	color:Red;
+}
+a:active
+{
+	color:Green;
+	font-weight:bold;
+}

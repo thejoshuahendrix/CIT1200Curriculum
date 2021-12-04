@@ -1,0 +1,33 @@
+<html>
+<head><title>Regular Expression</title>
+<script>
+function validation() {
+//var reg_exp=/ab/;
+//var reg_exp=/James/i;
+// var reg_exp=/[a-z]/i;
+//var reg_exp=/[A-Za-z]/;
+//var reg_exp=/[0-9]{5}/;
+//var reg_exp=/[a-z]{3}/i;
+//var reg_exp=/[0-9]{3,}/;
+//var reg_exp=/[a-z]{1,}/i;
+//var reg_exp=/^[0-9]{5,}/;
+//var reg_exp=/[0-9]{5,}$/;
+var reg_exp=/^[0-9]{5}$/; //Zipcode validator
+//var reg_exp=/^[a-z]{1, }$/i;
+if (reg_exp.test(document.getElementById("demo").value)==true)
+{
+alert("You entered a valid data. Thank you.");
+}
+else
+{
+alert("Please enter a valid data." );
+}
+
+}
+</script>
+</head>
+<body>
+<p>Enter Data here: <input id="demo" type ="text" ></p>
+<input type="button" onClick="validation()" value="check">
+</body>
+</html>

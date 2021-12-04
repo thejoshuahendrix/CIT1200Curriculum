@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JavaScript</title>
+
+</head>
+<body>
+<h1>My Very First JavaScript</h1>
+<p>
+JavaScript can react to events. Like the click of a button:
+</p>
+
+<button onmouseup="askName()">Click Me</button>
+
+<p>Input your name: <input type="text" id="inputName"></p>
+<p><button onclick="useTextbox()">Show Name Below</button> </p>
+<p>Your Name is <input type="text" id="outputName"></p> 
+
+
+<h2>Change the current Text</h2>
+<p id="demo">JavaScript can change HTML content with oneline Script.</p>
+<button type="button" onclick="document.getElementById('demo').innerHTML =
+'New Text with Javascript!' ">Click Me!</button>
+
+
+<p id="demo2">Some innerHTML </p>
+<p><button onclick ="usingInnerHTML()"> After loaded, document.write()</button></p>
+
+
+<p><button onclick="usingAlert()">This is an alert.</button></p>
+
+<p><button onclick="usingConsoleLog()">console.log()</button></p>
+<p><button onclick="usingWindowPrint()">window.print()</button></p>
+
+
+<script src="myScript.js"></script>
+</body>
+</html> 

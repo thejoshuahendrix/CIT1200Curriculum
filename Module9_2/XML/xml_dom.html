@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        var text, parser, xmlDoc;
+        text = "<bookstore><book>" + "<title>Everyday Italian</title>" + "<author>Giada De Laurentiis</author>" +
+            "<year>2005</year>" + "</book>" + "<book>" + "<title>My USA</title>" + "<author>James Bond</author>" +
+            "<year>2020</year>" + "</book></bookstore>";
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text, "text/xml");
+        document.getElementById("demo1").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        document.getElementById("demo2").innerHTML = xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+        document.getElementById("demo3").innerHTML = xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+        document.getElementById("demo4").innerHTML = xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+        document.getElementById("demo5").innerHTML = xmlDoc.getElementsByTagName("author")[1].childNodes[0].nodeValue;
+        document.getElementById("demo6").innerHTML = xmlDoc.getElementsByTagName("year")[1].childNodes[0].nodeValue;
+    </script>
+</body>
+
+</html>

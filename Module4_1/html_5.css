@@ -1,0 +1,28 @@
+header {
+background-color:blue;
+color:white;
+text-align:center;
+padding:5px;
+}
+nav {
+background-color:yellow;
+padding:5px;
+}
+section {
+padding: 15px;
+margin: 10px 10px 10px 10px;
+width: 300px;
+float: left;
+}
+aside{
+background-color:blue;
+padding:15px;
+margin:10px 0px 10px 350px;
+}
+footer {
+background-color:red;
+color:white;
+clear:both;
+text-align:center;
+padding:5px;
+}

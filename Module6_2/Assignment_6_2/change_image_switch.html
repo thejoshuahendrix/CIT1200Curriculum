@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("light_off.jpg")) 
+{
+element.src="light_on.jpg"; 
+}
+else 
+{
+element.src="light_off.jpg";
+}
+}
+
+
+
+
+
+</script>
+<p>You can Click (contineously) the light bulb to turn on/off the light</p><br>
+<p><img id="myimage" onclick="changeImage()" src="light_off.jpg " width="100" height="180"></p>
+
+<br><br><br>
+<a href ="change_style.html">change_style</a>
+
+</body>
+</html>

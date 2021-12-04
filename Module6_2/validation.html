@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html> <head><title>Check name and age</title>
+<script>
+function checkName()
+{
+var Name= document.getElementById("userName").value;
+if(Name=="")
+{
+alert("Please check and enter your name.!");
+return false;
+}
+else
+{
+//alert("You entered Name!");
+return true
+}
+}
+function checkNumber()
+{
+var age= document.getElementById("userAge").value;
+age =parseInt(age);
+if (isNaN(age))
+{
+alert("Not a number. Enter your age again!");
+return false;
+
+}
+else
+{
+//alert("You entered number!");
+return true;
+
+}
+}
+function checkValidation()
+{
+if(checkName()&& checkNumber())
+{
+alert("You entered proper data!");
+}
+}
+</script></head>
+<body>
+<h1> JavaScript_ Name and Age</h1>
+<p>Please input your name : <input id="userName" type="text"></p>
+<p>Please input your age : <input id="userAge" type="text"></p>
+<button type="button" onclick="checkValidation()">Click to check valid data or not!</button>
+<br>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="The HTML5">
+    <meta name="author" content="html5">
+    <title>The HTML5</title>
+</head>
+
+<body>
+    <h1>Fetch with a JSON File</h1>
+    <p>What are all the city and name?</p>
+    <div id="all"></div>
+    <p>Only 2nd city and name:</p>
+    <p>City: <span id="city"></span><br>Name: <span id="name"></span></p>
+    <script>
+    const api_url = 'https://api.mocki.io/v1/b043df5a'; 
+    getData(); //getData() function call//getData() function definition
+    async function getData(){
+        const response = await fetch(api_url);
+        const data= await response.json(); //the result is in data.  (several sets)
+        //to check from browser console.log()
+        console.log(data); //--> (1) All
+        console.log(data[1].city); //(2)if there are several sets, data[0].city, data[1].city...
+        console.log(data[1].name); //(2)if there are several sets, data[0].name, data[1].name...
+        newText= "City :------------------Name <br>";  //prepare newTextto display all result
+        i=0; //to display numbers//Loop start from here because there are more than one set.
+        data.forEach(row => {i++;const myCity= row.city; //Get each city
+        const myName= row.name; //Get each name 
+        newText= newText+ i+ ". " +  myCity+ ":-----" + myName+ "<br>"; //prepare newTextto display
+        });
+        document.getElementById("all").innerHTML= newText; //dispalyall-using .innerHTML//Display only 2nd data city and name
+        const {city, name} = data[1];                                                      //(3)data[1] is 2nd index of data.  data[0] is the first index.
+        document.getElementById("city").textContent= city;        //(3)Since JSON is JavaScript Object, we may use this way.
+        document.getElementById("name").textContent= name;//(3)Since JSON is JavaScript Object, we may use this way.
+        }
+        </script>
+</body>
+
+</html>

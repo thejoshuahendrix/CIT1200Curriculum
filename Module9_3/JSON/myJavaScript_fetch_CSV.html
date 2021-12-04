@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="The HTML5">
+    <meta name="author" content="html5">
+    <title>The HTML5 fetch CSV and graph</title>
+</head>
+
+<body>
+    <h1>Fetch with a CSV File</h1>
+    <div id="myText"></div>
+    <script>//getData() function call
+        getData();//getData() function definition -we use async function  
+        async function getData() {
+            const response = await fetch('myData.csv');
+            const data = await response.text();
+            const table = data.split('\n').splice(1); //.split() will split data into serveralpeices.   .splice(1) --> will copy from index(1) to the end 
+            newText = "Year ------Temp in Celsius <br>"; //prepare newTextto display
+            //Loop for each row, we only use first two colums-year and temp
+            table.forEach(row => {
+                const columns = row.split(','); //eltmeans element
+                const year = columns[0]; //Get columns[0] -year
+                const temp = parseFloat(columns[1]) + 14; //Get columns[1] -temp.  It is String.  So use parseFloat() to add 14.  
+                //14 was the base temprature.  So the graph will show original temprature.
+                newText = newText + year + ":------" + temp + "<br>"; //prepare newTextto display
+            });
+            document.getElementById("myText").innerHTML = newText; //display newText
+        }  
+    </script>
+</body>
+
+</html>

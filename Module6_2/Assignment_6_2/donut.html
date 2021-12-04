@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>YourName's Donuts</title>
+<script>
+     
+	 
+	 
+	 
+</script>
+</head>
+<body>
+<h1>Duncan's Just-In-Time Donuts</h1>
+<p>Cake donuts are 1.50 cents each, Glazed donuts are 1.75 cents each!</p>
+    
+ <img src="donut.jpg" alt="Just-In-Time Donuts" height="100" width="100" >
+    
+ <form name="orderform" method="POST">
+ <p>Name: <input type="text" id="name" name="name" value="" ></p>
+  
+  <p># of cake donuts: <input type="text" id="cakedonuts" name="cakedonuts" value="" onchange="updateOrder();"></p>
+<!-- Look carefuuly.  This function is called not by button but by changing the number of donuts. onchange="updateOrder(); -->
+    
+	
+	<p># of glazed donuts: <input type="text" id="glazeddonuts" name="glazeddonuts" value="" onchange="updateOrder();" ></p>
+<!-- Look carefuuly.  This function is called not by button but by changing the number of donuts. onchange="updateOrder(); --> 
+
+<p>Subtotal: <input type="text" id="subtotal" name="subtotal" value="" readonly="readonly" ></p>
+<p> Tax: <input type="text" id="tax" name="tax" value="" readonly="readonly" ></p>
+<p> Total: <input type="text" id="total" name="total" value="" readonly="readonly"></p>
+<input type="submit" value="Place Order" onclick="placeOrder()" ; >
+<!-- Submit button does not submit but just clear the form.-->
+</form>
+<br><br><br>
+<a href ="welcome.html">welcome webpage</a>
+<script src="donutCalculate.js"></script>
+</body>
+</html>

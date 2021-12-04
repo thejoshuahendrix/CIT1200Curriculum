@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta title="description" content="The HTML5">
+    <meta title="author" content="html5">
+    <title>The HTML5</title>
+</head>
+
+<body>
+    <h1>Fetch with a JSON File</h1>
+    <p>What are all the id and title?</p>
+    <div id="all"></div>
+    <p>Only 2nd id and title:</p>
+    <p>id: <span id="id"></span><br>title: <span id="title"></span></p>
+    <script>
+        const api_url = 'https://my-json-server.typicode.com/typicode/demo/posts';
+        getData(); //getData() function call//getData() function definition
+        async function getData() {
+            const response = await fetch(api_url);
+            const data = await response.json();
+            newText = "ID :------------------Title <br>";
+            i = 0;
+            data.forEach(row => {
+                i++;
+                const myId = row.id; //Get each id
+                const myTitle = row.title; //Get each title 
+                newText = newText + i + ". " + myId + ":-----" + myTitle + "<br>"; //prepare newTextto displayf
+
+            });
+            document.getElementById("all").innerHTML = newText;
+            const { id, title } = data[1];
+            document.getElementById("id").textContent = id;        //(3)Since JSON is JavaScript Object, we may use this way.
+            document.getElementById("title").textContent = title;//(3)Since JSON is JavaScript Object, we may use this way.
+        }
+    </script>
+</body>
+
+</html>

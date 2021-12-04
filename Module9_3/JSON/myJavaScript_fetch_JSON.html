@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5</title>
+    <meta name="description" content="The HTML5">
+    <meta name="author" content="html5">
+</head>
+
+<body>
+    <h1>Fetch with a JSON File</h1>
+    <p>Where is the ISS-International Space Station</p>
+    <p>latitude: <span id="lat"></span><br>longitude: <span id="lon"></span></p>
+    <script>
+        //URL for ISS location JSON file from internet:
+        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'; //we will use only latitude:  and longitude: 
+        //getISS() function call
+        getISS();
+        async function getISS() {
+            const response = await fetch(api_url);
+            const data = await response.json();//console.log(data); --> (1) All
+            console.log(data.latitude); //(2)Since JSON is JavaScript Object, we may use this way.
+            console.log(data.longitude);//(2)Since JSON is JavaScript Object, we may use this way.//Or 
+            const { latitude, longitude } = data; //(3)Since JSON is JavaScript Object, we may use this way.
+            document.getElementById("lat").textContent = latitude;//(3)Since JSON is JavaScript Object, we may use this way.
+            document.getElementById("lon").textContent = longitude; //(3)Since JSON is JavaScript Object, we may use this way.
+        }
+    </script>
+</body>
+
+</html>
